@@ -58,6 +58,4 @@ fn main() {
     let mut names = vec!["Aaron", "Felicia", "Alex", "Danniel"];
     // names.retain(|name|)
 
-
-
 }
