@@ -1,4 +1,4 @@
-use std::rc::Rc;;
+use std::rc::Rc;
 
 struct Kid {
     ball: Rc<Ball>
@@ -8,9 +8,10 @@ struct Ball;
 fn main() {
     {
         // rc is created and count is at 1
-        let foo = Rc::new("foo");
+        let foo: Rc<&str> = Rc::new("foo");
         // foo goes out of scope; count decreases
         // count is zero; the object gets destroyed
+        
     }
 
     {
@@ -48,5 +49,5 @@ fn spawn_kid_With_new_ball() -> Kid {
     }
     // Although the ball goes out of scope here, the object
     // behind it
-    // will survive as part of the 
+    // will survive as part of the
 }
